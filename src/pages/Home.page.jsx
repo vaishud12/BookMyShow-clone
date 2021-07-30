@@ -4,6 +4,7 @@ import React, { useState, useEffect }from "react";
 // Components
 import EntertainmentCardSlider from "../components/Entertainment/Entertainmentcard.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
+import StickyFooter from "../components/Footer/footer";
 
 //config
 import TempPosters from "../config/TempPosters.config";
@@ -74,7 +75,8 @@ const HomePage = () => {
                 alt="Rupay"
                 className="w-full h-full"
               />
-            </div>    <PosterSlider
+            </div>    
+            <PosterSlider
               images={popularMovies}
               title="Premieres"
               subtitle="Brand new relases every friday"
@@ -84,14 +86,14 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 my-8">
+      <div className="conatiner mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
         <PosterSlider
           images={topRatedMovies}
           title="Online Streaming events"
           isDark={false}
         />
       </div>
-      <div className="container mx-auto px-4 my-8">
+      <div className="conatiner mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
         <PosterSlider
           images={upcomingMovies}
           title="Outdoor events"
@@ -129,6 +131,7 @@ const HomePage = () => {
           isDark={false}
         />
       </div>
+      <StickyFooter />
   
       
       

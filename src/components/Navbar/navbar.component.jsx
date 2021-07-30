@@ -13,7 +13,7 @@ const NavSm = () => {
         <div>
           <h3 className="text-xl font-bold">It All starts Here!</h3>
           <span className="text-gray-400 text-xs flex items-center">
-            PUNE <BiChevronRight />
+            Bengaluru <BiChevronRight />
           </span>
         </div>
         <div className="w-8 h-8">
@@ -38,16 +38,17 @@ const NavMd = () => {
 const NavLg = () => {
   return (
     <>
-      <div className="container mx-auto px-4 flex items-center justify-between">
+    <div className="container mx-auto flex flex-col"> 
+      <div className="container mx-auto px-4 flex items-center justify-between mb-4 ">
         <div className="flex items-center w-1/2 gap-3">
-          <div className="w-12 h-12">
+          <div className="w-14 h-16">
             <img
               src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
               alt="logo"
               className="w-full h-full"
             />
           </div>
-          <div className="w-full flex items-center gap-3 bg-white px-3 py-2 rounded-md">
+          <div className="w-full flex items-center gap-3 bg-white px-4 py-2 rounded-md">
             <BiSearch />
             <input
               type="search"
@@ -58,7 +59,7 @@ const NavLg = () => {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-gray-200 text-xs flex items-center cursor-pointer hover:text-white">
-            PUNE <BiChevronDown />
+            Bengaluru <BiChevronDown />
           </span>
           <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
             Sign in
@@ -68,16 +69,18 @@ const NavLg = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex col px-5 text-white text-sm font-bold mb-2">
+      <div className="flex flex-col px-5 text-white text-sm font-bold mb-2">
         <nav>
-        <a className="px-5" href="/" >Home</a>
+          <a className="px-5" href="/" >Home</a>
           <a className="px-5" href="/events" >Events</a> 
           <a className="px-5" href="/plays" >Plays</a> 
           <a className="px-5" href="/sports" >Sports</a>
           <a className="px-5" href="/activities" >Activities</a>
-          <a className="px-5" href="/stream" >Stream</a> 
+          <a className="px-5" href="/stream" >Stream</a>   
         </nav>
       </div>
+      </div> 
+
     </>
   );
 };
@@ -104,10 +107,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
