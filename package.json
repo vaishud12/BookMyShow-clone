@@ -48,6 +48,8 @@
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7",
+    "@angular-devkit/build-angular": "0.803.20",
+    "@angular/cli": "8.3.20"
   }
 }
