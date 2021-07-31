@@ -2,11 +2,11 @@ import React,{ useState, useEffect }  from 'react';
 import axios from 'axios';
 
 //components
-import Poster from "../components/Poster/Poster.component";
-import StreamHero from "../components/StreamHero/StreamHero.component";
+
+
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import StreamSlider from "../components/PosterSlider/StreamSlider.component";
-import StreamInfo from "../components/StreamHero/StreamInfo.component";
+
 import StickyFooter from "../components/Footer/footer";
 
 //config

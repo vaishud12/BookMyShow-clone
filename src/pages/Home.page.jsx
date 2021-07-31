@@ -132,11 +132,6 @@ const HomePage = () => {
         />
       </div>
       <StickyFooter />
-  
-      
-      
-
-      
     </>
   );
 };
