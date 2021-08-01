@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 // components
-import Poster from "../Poster/Poster.component";
+import Poster from "../Poster/poster.component";
 
 // Configs
 import PosterCarouselSettings from "../../config/PosterCarousel.config";
