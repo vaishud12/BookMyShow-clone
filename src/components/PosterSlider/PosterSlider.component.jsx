@@ -36,3 +36,6 @@ const PosterSlider = (props) => {
   );
 };
 export default PosterSlider;
+
+
+

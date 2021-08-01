@@ -119,7 +119,7 @@ const HomePage = () => {
 
       <div className="conatiner mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
         <PosterSlider 
-          images={popularMovies}
+          images={nowPlayingMovies}
           title="Popular Events"
           isDark={false}
         />
