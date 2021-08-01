@@ -1,8 +1,7 @@
 import React,{ useState, useEffect }  from 'react';
 import axios from 'axios';
 
-//components
-
+//component 
 
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import StreamSlider from "../components/PosterSlider/StreamSlider.component";
@@ -23,6 +22,7 @@ const Stream = () => {
     const [topRatedTV, setTopRatedTV] = useState([]);
     const [tvOnTheAir, setTvOnTheAir] = useState([]);
     const [tvAiringToday, setTvAiringToday] = useState([]);
+    
 
     useEffect(() => {
         const requestPopularMovies = async () => {
@@ -50,8 +50,8 @@ const Stream = () => {
     
         requesttopRatedTV();
       }, []);
-      
-    useEffect(() => {
+
+      useEffect(() => {
         const requestTvOnTheAir = async () => {
           const getTvOnTheAir = await axios.get("/tv/on_the_air");
           setTvOnTheAir(getTvOnTheAir.data.results);
@@ -59,8 +59,8 @@ const Stream = () => {
     
         requestTvOnTheAir();
       }, []);
-
-    useEffect(() => {
+      
+      useEffect(() => {
         const requestTvAiringToday = async () => {
           const getTvAiringToday = await axios.get("/tv/airing_today");
           setTvAiringToday(getTvAiringToday.data.results);
@@ -68,6 +68,7 @@ const Stream = () => {
     
         requestTvAiringToday();
       }, []);  
+      
 
       useEffect(() => {
         const requestTopRatedMovies = async () => {
@@ -152,13 +153,13 @@ const Stream = () => {
                 <div className="flex flex-col gap-10">
                     <div className="container mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
                         <PosterSlider 
-                        images={popularMovies}
+                        images={nowPlayingMovies}
                         title="Premiere Of The Week" 
                         isDark={false} />
                     </div>
                     <div className="container mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
-                        <PosterSlider 
-                        images={upcomingMovies}
+                        <PosterSlider
+                        images={tvAiringToday}
                         title="Coming Soon" 
                         isDark={false} />
                     </div>
@@ -170,7 +171,7 @@ const Stream = () => {
                     </div>
                     <div className="container mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
                         <PosterSlider 
-                        images={nowPlayingMovies}
+                        images={popularMovies}
                         title="Stream Recommends" 
                         isDark={false} />
                     </div>   
@@ -201,19 +202,19 @@ const Stream = () => {
                <div className="flex flex-col gap-10">   
                 <div className="container mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
                         <PosterSlider 
-                        images={tvOnTheAir}
+                        images={upcomingMovies}
                         title="Trending Right Now" 
                         isDark={false} />
                 </div>
                 <div className="container mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
                         <PosterSlider 
-                        images={topRatedTV}
+                        images={tvOnTheAir}
                         title="World Cinema" 
                         isDark={false} />
                 </div>
                 <div className="container mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
                         <PosterSlider 
-                        images={tvAiringToday}
+                        images={topRatedMovies}
                         title="Missed in Theaters" 
                         isDark={false} />
                 </div>
@@ -248,13 +249,13 @@ const Stream = () => {
                 <div className="flex flex-col gap-10">
                 <div className="container mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
                         <PosterSlider 
-                        images={popularMovies}
+                        images={upcomingMovies}
                         title="Dubbed Movies" 
                         isDark={false} />
                 </div>
                 <div className="container mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
                         <PosterSlider 
-                        images={topRatedMovies}
+                        images={topRatedTV}
                         title="Blockbusters" 
                         isDark={false} />
                 </div>

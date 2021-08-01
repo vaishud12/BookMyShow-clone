@@ -14,7 +14,7 @@ const HomePage = () => {
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
-  
+  const [topRatedTV, setTopRatedTV] = useState([]);
 
 
   useEffect(() => {
@@ -24,6 +24,15 @@ const HomePage = () => {
     };
 
     requestPopularMovies();
+  }, []);
+
+  useEffect(() => {
+    const requesttopRatedTV = async () => {
+      const gettopRatedTV = await axios.get("/tv/top_rated");
+      setTopRatedTV(gettopRatedTV.data.results);
+    };
+
+    requesttopRatedTV();
   }, []);
 
   useEffect(() => {
@@ -102,7 +111,7 @@ const HomePage = () => {
       </div>
       <div className="conatiner mx-auto lg:px-28 md:px-4 sm:px-4 my-10">
         <PosterSlider 
-          images={nowPlayingMovies}
+          images={topRatedTV}
           title="Laughter Therapy"
           isDark={false}
         />

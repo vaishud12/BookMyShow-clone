@@ -41,7 +41,7 @@ const NavLg = () => {
     <div className="container mx-auto flex flex-col"> 
       <div className="container mx-auto px-4 flex items-center justify-between mb-4 ">
         <div className="flex items-center w-1/2 gap-3">
-          <div className="w-14 h-16">
+          <div className="w-20 h-18">
             <img
               src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
               alt="logo"

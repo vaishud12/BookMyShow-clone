@@ -22,14 +22,16 @@ const Hline = () => {
                 <Grid item xs={4}>
                     <hr
                         style={{
-                            marginTop: '50px',
+                            marginTop: '48px',
                             color: '#c5c5c5',
                         }}
                     />
                 </Grid>
                 <Grid xs={1}/>
             </Grid>
-            <center><font size="5" color="red"><h1>website clone: Developed by vaishnavi Devardekar</h1></font></center>
+            
+            <center><font size="5" color="yellow"><h1>clone website: Developed by vaishnavi Devardekar</h1></font></center>
+            
         </div>
     );
 }
