@@ -8,8 +8,8 @@ import StreamSlider from "../components/PosterSlider/StreamSlider.component";
 
 import StickyFooter from "../components/Footer/footer";
 
-//config
-import TempPosters from "../config/TempPosters.config";
+// //config
+// import TempPosters from "../config/TempPosters.config";
 import TempStreamPosters from '../config/TempStreamPosters.config';
 
 
